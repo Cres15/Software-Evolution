@@ -5,7 +5,7 @@
     "react-dom": "^19.2.0",
     "tailwindcss": "^4.1.14"
   },
-  "name": "software-evolution",
+  "name": "c",
   "version": "1.0.0",
   "description": "<DOCTYPE html> \r <html lang=\"en\">\r <head>\r     <meta charset=\"UTF-8\">\r     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r     <title>Software evolution</title>",
   "main": "index.js",
@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/b3rtuso/Software-Evolution/issues"
   },
-  "homepage": "https://github.com/b3rtuso/Software-Evolution#readme"
+  "homepage": "https://github.com/b3rtuso/Software-Evolution#readme",
+  "devDependencies": {}
 }

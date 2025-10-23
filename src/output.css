@@ -32,8 +32,8 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --font-weight-extrabold: 800;
+    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -202,9 +202,6 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
-  .m-100 {
-    margin: calc(var(--spacing) * 100);
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -341,8 +338,14 @@
   .text-gray-600 {
     color: var(--color-gray-600);
   }
+  .text-gray-900 {
+    color: var(--color-gray-900);
+  }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .hover\:text-blue-300 {
     &:hover {
@@ -387,6 +390,30 @@
     }
   }
 }
+.Info12 {
+  margin-block: calc(var(--spacing) * 10);
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+  --tw-border-style: solid;
+  border-style: solid;
+  padding-inline: calc(var(--spacing) * 10);
+  padding-block: calc(var(--spacing) * 10);
+  text-align: justify;
+  font-size: 20px;
+}
+.heading {
+  font-size: 45px;
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+}
+.picture {
+  animation: var(--animate-pulse);
+  border-style: var(--tw-border-style);
+  border-width: 5px;
+  --tw-border-style: solid;
+  border-style: solid;
+  background-color: #67b65;
+}
 @property --tw-space-x-reverse {
   syntax: "*";
   inherits: false;
@@ -396,11 +423,22 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-space-x-reverse: 0;
       --tw-font-weight: initial;
+      --tw-border-style: solid;
     }
   }
 }
